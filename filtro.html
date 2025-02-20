@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- No es necesario este meta -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+    <link rel="stylesheet" href="filtro.css" />
+    <title>Filtros en JS</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="filtro.css">
-  <title>Filtros en JS</title>
-</head>
-
-<body>
-
-  <div>
-      <input type="text" placeholder="Seleccioná un color o tipo">
-      <button>Filtrar</button>
-      <h1>Lista de productos </h1>
-      <div id="lista-de-productos">
+  <body>
+    <div class="container">
+      <!-- Le añadi una clase al input para poder seleccionarlo con js -->
+      <!-- añadi un label con for al id del input para mayor accesibilidad  -->
+      <label for="filtro">Selecciona un color o tipo</label>
+      <input
+        type="text"
+        id="filtro"
+        placeholder="Filtrar por color o tipo"
+        class="input-filtrar"
+      />
     </div>
-  </div>
-  <script src="../filtro.js"></script>
-</body>
-
+    <button id="boton-filtrar" type="button" class="boton">Filtrar</button>
+    <button id="boton-mostrar-todos" type="button" class="boton">
+      Mostrar todos
+    </button>
+    <h1>Lista de productos</h1>
+    <div id="lista-de-productos"></div>
+    <!-- importe el script bien estaba mal la ruta -->
+    <script src="filtro.js"></script>
+  </body>
 </html>
